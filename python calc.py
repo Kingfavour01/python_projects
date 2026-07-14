@@ -1,4 +1,4 @@
-from unittest import result
+
 numb1 = float(input("input your first number: "))
 operator = input("enter your operator ( +, - , / , *) : ")
 numb2 = float(input("input your second number: "))
