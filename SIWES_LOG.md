@@ -7,6 +7,64 @@
 
 ---
 
+## Week 1
+
+---
+
+### Day 1 (Week 1, Day 1) — Foundations of Python Programming and Control Flow
+
+**Focus:** Python Programming Fundamentals, Algorithmic Logic, and Modular Design
+
+**Activity Description:**
+Engaged in a comprehensive practical training module focused on Python fundamentals, environment configuration, and basic program execution. Transitioned from theoretical syntax to practical application by developing introductory utility software, including an arithmetic calculator, metric converters (weight and temperature), and a text-processing email slicer.
+
+**Key Concepts Learned:**
+
+- **Memory Management & Data Types:** Understanding dynamic typing, variable initialization, and explicit type casting to manage memory states effectively.
+- **Standard I/O Operations:** Capturing and sanitizing standard user input, and utilizing format specifiers for clean console output.
+- **Control Structures:** Implementing logical operators and branching logic using `if/elif/else` statements and conditional expressions to dictate program flow based on user constraints.
+- **String Manipulation:** Utilizing built-in string methods, zero-based indexing, and string slicing to parse and process textual data.
+
+**Relevant Files:** `python calc.py`, `weight converter.py`, `temperature converter.py`, `email indexing.py`, `area calc.py`, `3d volume calc.py`
+
+---
+
+### Day 2 (Week 1, Day 2) — Iteration, Data Structures, and Algorithmic Logic
+
+**Focus:** Iteration, Data Structures, and Algorithmic Logic
+
+**Activity Description:**
+Advanced to handling complex data states, repetitive tasks, and non-deterministic logic. Designed and executed interactive console applications that required sustained data states and user interaction. Projects included a financial interest calculator, a shopping cart system, and randomized simulation models (e.g., encryption program, dice roller, and logic-based games).
+
+**Key Concepts Learned:**
+
+- **Iterative Processing:** Controlling execution flow and timing cycles utilizing `while` loops, `for` loops, and nested loop architectures.
+- **Data Structures (Collections):** Differentiating and deploying standard Python collections — Lists (mutable arrays), Tuples (immutable arrays), Sets (unique elements), and Dictionaries (key-value pairs) — for optimized data storage. Explored 2D collections for matrix-style data mapping.
+- **Stochastic Processes:** Integrating Python's standard library modules to generate pseudorandom numbers, essential for building unpredictable program logic and simulations.
+- **Applied Algorithmic Logic:** Combining loops, collections, and conditionals to construct stateful applications (such as a concession stand management system) and basic security concepts (encryption algorithms).
+
+**Relevant Files:** `C.I calc 2.py`, `compound intrest calculator.py`, `shopping cart.py`, `shooping chart program.py`, `encryption device.py`, `dice.py`, `guessing number game.py`, `rock, paper, scissors.py`, `rock, paper, scissors v2.py`, `python quiz game.py`, `fizz buzz.py`, `timer.py`, `2d key pad.py`, `menu (dictioinary practice).py`, `user_input validation.py`, `rectangle drawing.py`, `sentece gamr.py`
+
+---
+
+### Day 3 (Week 1, Day 3) — Modular Programming & Functions
+
+**Focus:** Modular Programming and Function Design
+
+**Activity Description:**
+Focused on modular software design by creating reusable Python functions. Practical exercises involved abstracting repetitive logic and utilizing advanced parameter handling — including default arguments, keyword arguments, and variable-length argument lists — to build highly scalable and dynamic code.
+
+**Key Concepts Learned:**
+
+- **Function Construction:** Defining and invoking reusable code blocks to improve overall script maintainability and reduce code duplication.
+- **Default Arguments:** Implementing fallback parameter values using default arguments, allowing functions to be called with fewer arguments than defined.
+- **Keyword Arguments:** Enhancing function call clarity and flexibility by passing arguments explicitly by parameter name, eliminating positional dependency.
+- **Dynamic Data Handling (`*args` & `**kwargs`):** Utilizing `*args` (packed as tuples) and `**kwargs` (packed as dictionaries) to seamlessly process unpredictable or variable amounts of user inputs.
+
+**Relevant Files:** `shipping function.py`, `function to create full name.py`, `function to genrate phone number.py`, `odd or even function.py`, `timer using function.py`, `number extractor.py`
+
+---
+
 ## Week 2
 
 ---
