@@ -78,4 +78,10 @@ This repository documents the basic Python tasks assigned during my internship p
 
 ---
 
+## SIWES Daily Activity Log
+
+Detailed daily activity and progress reports for the internship programme are documented in [`SIWES_LOG.md`](SIWES_LOG.md).
+
+---
+
 *Built during internship programme at Afe Babalola University (ABUAD).*
