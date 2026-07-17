@@ -43,7 +43,7 @@ Advanced to handling complex data states, repetitive tasks, and non-deterministi
 - **Stochastic Processes:** Integrating Python's standard library modules to generate pseudorandom numbers, essential for building unpredictable program logic and simulations.
 - **Applied Algorithmic Logic:** Combining loops, collections, and conditionals to construct stateful applications (such as a concession stand management system) and basic security concepts (encryption algorithms).
 
-**Relevant Files:** `C.I calc 2.py`, `compound intrest calculator.py`, `shopping cart.py`, `shooping chart program.py`, `encryption device.py`, `dice.py`, `guessing number game.py`, `rock, paper, scissors.py`, `rock, paper, scissors v2.py`, `python quiz game.py`, `fizz buzz.py`, `timer.py`, `2d key pad.py`, `menu (dictioinary practice).py`, `user_input validation.py`, `rectangle drawing.py`, `sentece gamr.py`
+**Relevant Files:** `C.I calc 2.py`, `compound intrest calculator.py`, `shoping cart.py`, `shooping chart program.py`, `encyption device.py`, `dice.py`, `guessing number game.py`, `rock, papper , scissors.py`, `rock , paper , scissors v2.py`, `python quiz game.py`, `fizz buzz.py`, `timer.py`, `2d key pad.py`, `menu ( dictioinary practice).py`, `user_input validation.py`, `rectangle drawing.py`, `sentece gamr.py`
 
 ---
 
@@ -84,6 +84,7 @@ Transitioned into writing more efficient, "Pythonic" code. The focus of today's 
 - **Program Architecture (Modules & Scope):**
   - **Modules:** Abstracted logic into separate `.py` files and imported them into a main execution script, establishing the foundation for building scalable, multi-file software.
   - **Scope Resolution:** Studied the LEGB (Local, Enclosing, Global, Built-in) rule to understand how the Python interpreter searches for variable names in memory, preventing namespace collisions and bugs when passing data between functions and modules.
+  - **`if __name__ == '__main__'` Guard:** Learned to use the script entry-point pattern to differentiate between reusable module code and standalone execution logic, preventing unintended code from running during import.
 
 **Relevant Files:** `match case.py`
 
@@ -119,6 +120,7 @@ Today's session was highly intensive, merging architectural software design (Obj
 **1. Object-Oriented Programming (OOP) & Architectures:**
 
 - **Classes and Object Instantiation:** Transitioned from functional scripts to object-oriented structures, utilizing the `__init__` constructor and `self` keyword to encapsulate state and behavior.
+- **Class vs. Instance Variables:** Differentiated between class-level attributes (shared across all instances) and instance-level attributes (unique to each object), understanding their memory allocation and lookup precedence.
 - **Inheritance & Hierarchy:** Implemented inheritance (including multiple inheritance) to share logic between parent and child classes. Utilized the `super()` function to proxy initialization logic upward through the class tree.
 - **Polymorphism & Abstraction:** Enforced structural rules using Abstract Base Classes (preventing raw parent instantiation) and explored Duck Typing, where an object's suitability is determined by its available methods rather than its explicit class type.
 - **Composition vs. Aggregation:** Modeled structural relationships, differentiating between strong dependencies (Composition) and weak references (Aggregation) between objects.
@@ -140,3 +142,45 @@ Today's session was highly intensive, merging architectural software design (Obj
 - **Recursive Algorithms:** Transitioned from iterative loops to recursive function design. Engineered functions that call themselves to solve progressively smaller subsets of a problem (e.g., computing factorials or reversing strings), mastering the "base case" termination logic and the "recursive leap of faith."
 
 **Relevant Files:** `car.py`, `oject oriented programming.py`
+
+---
+
+## Week 3
+
+---
+
+### Day 7 (Week 3, Day 1) — Advanced System Operations, Metaprogramming, and Performance Profiling
+
+**Focus:** Advanced Object-Oriented Mechanics, System I/O Operations, and Temporal Software Utilities
+
+**Activity Description:**
+Today's training module marked a significant transition from writing isolated logic scripts to engineering robust, production-ready software that directly interacts with the host operating system. The practical session was divided into three major phases: deeply extending Object-Oriented Programming (OOP) architectures, safely handling external file streams, and mastering time-based computations. The training culminated in building a real-time terminal application — an Alarm Clock — while profiling code to ensure execution efficiency.
+
+**Key Concepts Learned & Applied:**
+
+**1. Advanced Object-Oriented Architecture & Metaprogramming:**
+
+- **Composition & Nested Classes:** Moved beyond basic inheritance to model complex "Part-Of" relationships. Learned how to tightly couple objects using Composition (where the child object cannot exist without the parent object) and utilized Nested Classes to keep the global namespace clean and logically organized.
+- **Method Scoping (`@staticmethod` & `@classmethod`):** Differentiated class behaviors. Implemented `@classmethod` to create alternative constructors that modify class-level states, and `@staticmethod` to attach utility functions to a class without requiring an instantiated object or altering class states.
+- **Magic (Dunder) Methods:** Explored Python's internal data model by overriding double-underscore methods (e.g., `__str__`, `__eq__`, `__add__`). This allowed custom objects to interact natively with built-in Python operators, such as adding two custom objects together using the standard `+` symbol.
+- **Decorators & Data Encapsulation:** Mastered the use of function decorators to dynamically alter the behavior of functions without permanently modifying their source code. Specifically, applied the `@property` decorator to enforce strict data encapsulation, allowing private variables to be accessed and modified safely via hidden getter and setter methods.
+
+**2. Functional Utilities & Data Stream Manipulation:**
+
+- **Lambda Functions:** Deployed anonymous, single-line lambda functions for quick, throwaway logical operations. These were particularly useful when providing custom sorting keys for complex data structures.
+- **Advanced Sorting & `zip()`:** Implemented dynamic sorting algorithms to arrange complex datasets in ascending/descending order based on specific object attributes. Utilized the `zip()` function to pair and iterate through multiple independent lists simultaneously, drastically reducing the need for complex index tracking.
+- **Recursion (Review):** Reinforced the principles of recursive logic, ensuring a solid understanding of base cases and the call stack memory limits.
+
+**3. System-Level Operations: File I/O & Exception Management:**
+
+- **Graceful Error Handling (`try`/`except`/`finally`):** Engineered crash-resistant software. Instead of allowing runtime errors to crash the entire application, implemented exception handling blocks to catch specific errors (like `ValueError` or `ZeroDivisionError`), log them, and execute fallback logic safely.
+- **File Detection & Streams:** Interacted with the host OS using the `os` module to verify file path existence before attempting operations.
+- **Reading & Writing Files:** Opened data streams to write (`w`), append (`a`), and read (`r`) external text files. Emphasized the use of context managers (`with open(...)`) to ensure file streams are automatically closed after execution, preventing memory leaks and file corruption.
+
+**4. Chronometrics & Practical Application:**
+
+- **Date & Time Manipulation:** Utilized Python's `datetime` module to fetch the current system time, format temporal data into human-readable strings, and calculate time deltas.
+- **Execution Time Profiling:** Conducted software benchmarking using the `time` module. Measured the exact start and end times of functions to calculate their execution speed down to the millisecond, which is critical for optimizing slow algorithms.
+- **Practical Project (Alarm Clock):** Synthesized all temporal logic into building a live Alarm Clock application. Engineered a `while True` loop combined with `time.sleep(1)` to actively poll the operating system's clock without consuming excessive CPU resources, triggering an alert event when the target time was successfully matched.
+
+**Relevant Files:** `alarm clock.py`, `calc execution speed.py`, `file detecton.py`, `file manipulation.py`, `python sorting.py`, `recusion.py`, `output.txt`, `text.txt`
