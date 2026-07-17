@@ -145,11 +145,7 @@ Today's session was highly intensive, merging architectural software design (Obj
 
 ---
 
-## Week 3
-
----
-
-### Day 7 (Week 3, Day 1) — Advanced System Operations, Metaprogramming, and Performance Profiling
+### Day 7 (Week 2, Day 4) — Advanced System Operations, Metaprogramming, and Performance Profiling
 
 **Focus:** Advanced Object-Oriented Mechanics, System I/O Operations, and Temporal Software Utilities
 
