@@ -180,3 +180,62 @@ Today's training module marked a significant transition from writing isolated lo
 - **Practical Project (Alarm Clock):** Synthesized all temporal logic into building a live Alarm Clock application. Engineered a `while True` loop combined with `time.sleep(1)` to actively poll the operating system's clock without consuming excessive CPU resources, triggering an alert event when the target time was successfully matched.
 
 **Relevant Files:** `alarm clock.py`, `calc execution speed.py`, `file detecton.py`, `file manipulation.py`, `python sorting.py`, `recusion.py`, `output.txt`, `text.txt`
+
+---
+
+## Week 3
+
+---
+
+### Day 8 (Week 3, Day 1 — Monday) — WordPress CMS & LearnPress AI Integration
+
+**Focus:** Content Management Systems and E-Learning Platform Configuration
+
+**Activity Description:**
+Transitioned from Python programming to web content management by setting up and configuring a WordPress site. Focused on installing and configuring the LearnPress plugin with its AI-powered features to build a structured e-learning platform.
+
+**Key Concepts Learned:**
+
+- **WordPress CMS:** Installed and configured a WordPress site, understanding the dashboard, themes, plugins, and page/post management workflow.
+- **LearnPress Plugin:** Set up the LearnPress learning management system (LMS) plugin to create, organize, and deliver online courses.
+- **LearnPress AI:** Configured AI-powered features within LearnPress for automated course content generation, quiz creation, and intelligent student recommendations.
+- **E-Learning Structure:** Designed course hierarchies (courses → lessons → quizzes) and managed student enrollment and progress tracking.
+
+---
+
+### Day 9 (Week 3, Day 2 — Tuesday) — Advanced Python Iteration, Concurrency, API Integration & GUI Development
+
+**Focus:** Iterators, Generators, Dataclasses, Multithreading, API Requests, and PyQt5 GUI
+
+**Activity Description:**
+Covered a broad range of advanced Python topics in a single intensive session, spanning memory-efficient iteration, data class optimization, concurrent programming, REST API consumption, and graphical user interface development with PyQt5. Built multiple GUI applications including labeled windows, image displays, layout managers, buttons, and checkboxes.
+
+**Key Concepts Learned & Applied:**
+
+**1. Advanced Iteration & Memory Optimization:**
+
+- **Iterators:** Understood the iterator protocol (`__iter__` and `__next__`) and how `for` loops work under the hood by calling `iter()` on iterables.
+- **Generators:** Built memory-efficient generator functions using the `yield` keyword to produce sequences lazily, avoiding storing entire datasets in memory.
+- **Generator Expressions:** Wrote compact, single-line generator expressions (similar to list comprehensions) for memory-conscious data pipelines.
+
+**2. Data Structures & Code Simplification:**
+
+- **Dataclasses:** Utilized the `@dataclass` decorator to automatically generate `__init__`, `__repr__`, `__eq__`, and other boilerplate methods, dramatically reducing class definition verbosity.
+
+**3. Concurrency & Performance:**
+
+- **Multithreading:** Implemented concurrent execution using Python's `threading` module to run multiple tasks in parallel, improving I/O-bound application performance.
+
+**4. API Integration:**
+
+- **REST API Requests:** Used the `requests` library to fetch live data from external web APIs, parse JSON responses, and handle HTTP status codes for robust data retrieval.
+
+**5. GUI Development with PyQt5:**
+
+- **Basic GUI Setup:** Created a `QMainWindow` application with `QApplication` event loop, setting window titles, geometry, and icons.
+- **Labels & Images:** Displayed text labels with `QLabel` and loaded/displayed images using `QPixmap`.
+- **Layout Managers:** Organized widgets using `QVBoxLayout`, `QHBoxLayout`, and `QGridLayout` for responsive, resizable interfaces.
+- **Buttons & Events:** Created interactive `QPushButton` widgets connected to custom slot methods via the `clicked` signal.
+- **Checkboxes:** Implemented `QCheckBox` widgets for boolean/toggle user inputs.
+
+**Relevant Files:** `gui.py`, `push button.py`
