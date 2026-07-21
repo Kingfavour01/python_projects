@@ -53,6 +53,48 @@ This repository documents the basic Python tasks assigned during my internship p
 | `timer using function.py` | Countdown timer implemented as a reusable function with start/end parameters. |
 | `user_input validation.py` | Validates a username for length (> 12), spaces, and non-alphabetic characters. |
 | `rectangle drawing.py` | Draws a rectangle of user-specified rows, columns, and symbol using nested loops. |
+| `match case.py` | Demonstrates Python structural pattern matching (`match-case`) as an alternative to `if/elif/else` chains. |
+| `word_list.py` | Word bank used by the Hangman game for random word selection. |
+
+### Stateful Applications & Algorithms
+
+| Project | Description |
+|---|---|
+| `credit card validation.py` | Validates credit card numbers using the Luhn algorithm with step-based string parsing. |
+| `banking function.py` | Session-based banking program with persistent balance and deposit/withdrawal transactions. |
+| `slot machine.py` | Slot machine simulation with probability logic, matrix-style grid printing, and balance tracking. |
+| `hangman.py` | Hangman game with real-time string masking, guessed letter tracking via sets, and input validation. |
+
+### Object-Oriented Programs
+
+| Project | Description |
+|---|---|
+| `car.py` | Demonstrates OOP fundamentals with a Car class including attributes and methods. |
+| `oject oriented programming.py` | Illustrates class instantiation, inheritance, and the `self` keyword. |
+| `journal.py` | Personal journal app with OOP, file I/O, `@property`, dataclass-style entries, search, and mood tracking. |
+
+### System Operations & File I/O
+
+| Project | Description |
+|---|---|
+| `alarm clock.py` | Real-time alarm clock using `datetime` and `time.sleep()` polling loop. |
+| `calc execution speed.py` | Benchmarks function execution time using the `time` module. |
+| `file detecton.py` | Checks file path existence using the `os` module before performing operations. |
+| `file manipulation.py` | Reads, writes, and appends to external text files using context managers. |
+| `python sorting.py` | Demonstrates advanced sorting with lambda functions, custom keys, and `zip()`. |
+| `recusion.py` | Reinforces recursive logic with base case termination and call stack management. |
+
+### API & Web
+| Project | Description |
+|---|---|
+| `how to connect to api.py` | Fetches live data from REST APIs using the `requests` library and parses JSON responses. |
+
+### GUI Applications (PyQt5)
+
+| Project | Description |
+|---|---|
+| `gui.py` | PyQt5 GUI demo with QVBoxLayout, colored labels, and widget management. |
+| `push button.py` | PyQt5 button demo with click events, dynamic text changes, and button disabling. |
 
 ---
 
@@ -74,7 +116,9 @@ This repository documents the basic Python tasks assigned during my internship p
 ## Requirements
 
 - Python 3.x
-- No external dependencies required
+- `requests` — for API calls (`how to connect to api.py`)
+- `PyQt5` — for GUI applications (`gui.py`, `push button.py`)
+- `pygame-ce` — for game development
 
 ---
 
