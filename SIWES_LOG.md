@@ -262,3 +262,36 @@ Covered a broad range of advanced Python topics in a single intensive session, s
 - **Checkboxes & Toggle Input:** Implemented `QCheckBox` widgets for boolean/toggle user inputs. Connected state change signals to handler functions that read the checked state and triggered conditional logic.
 
 **Relevant Files:** `gui.py`, `push button.py`, `how to connect to api.py`
+
+---
+
+### Day 10 (Week 3, Day 3 — Wednesday) — Advanced PyQt5 Widgets & Qt Style Sheets
+
+**Focus:** Radio Buttons, Line Edits, and Qt Style Sheet (CSS) Styling
+
+**Activity Description:**
+Today's session extended PyQt5 GUI development by introducing three critical components for building interactive, professional-looking desktop applications. Implemented radio buttons for mutually exclusive selection, line edits for text input capture, and Qt Style Sheets (QSS) — PyQt5's equivalent of CSS — for complete visual customization of widget appearance, layout spacing, and hover/focus states.
+
+**Key Concepts Learned & Applied:**
+
+**1. Radio Buttons (`QRadioButton`):**
+
+- **Mutually Exclusive Selection:** Implemented `QRadioButton` widgets within a `QButtonGroup` to enforce single-selection behavior, where selecting one radio button automatically deselects all others in the same group.
+- **State Detection:** Connected the `toggled` signal to custom slot methods to detect which radio button is currently selected and trigger corresponding actions.
+- **Use Case Mapping:** Applied radio buttons for preference selection (e.g., choosing payment methods, difficulty levels, or category filters) where only one option from a set should be active.
+
+**2. Line Edits (`QLineEdit`):**
+
+- **Text Input Capture:** Used `QLineEdit` widgets to accept single-line text input from the user. Connected the `textChanged` and `returnPressed` signals to capture input in real-time or on submission.
+- **Input Modes & Validation:** Configured different input modes including password masking (`setEchoMode(QLineEdit.Password)`), numeric-only input, and read-only fields.
+- **Placeholder & Styling:** Set placeholder text with `setPlaceholderText()` and applied stylesheet rules for focused, unfocused, and error states.
+- **Data Extraction:** Retrieved entered text using `.text()` method and passed it to other parts of the application for processing or display.
+
+**3. Qt Style Sheets (QSS / CSS):**
+
+- **QSS Syntax:** Applied Cascading Style Sheet rules to PyQt5 widgets using `.setStyleSheet()`. Used CSS-like syntax with selectors, properties, and values — targeting specific widgets by class name, object name, or type.
+- **Visual Customization:** Styled widget backgrounds (`background-color`), text colors (`color`), borders (`border`, `border-radius`), padding, and margins. Applied hover effects using `:hover` pseudo-state and focus indicators with `:focus`.
+- **Nested & Combined Selectors:** Targeted specific widgets within layouts using descendant selectors (e.g., `QPushButton#myButton` for a named button, or `QWidget QLabel` for labels inside a specific container).
+- **Consistent Theming:** Applied global stylesheets at the `QApplication` level to enforce a consistent theme across all widgets in the application, mimicking the separation of structure (Python) and presentation (CSS) found in web development.
+
+**Relevant Files:** *(pending — new PyQt5 widget demos)*
