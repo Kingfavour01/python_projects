@@ -1,7 +1,7 @@
 import sys
 from datetime import datetime
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtGui import QFont
 
 
@@ -15,7 +15,7 @@ class DigitalClock(QMainWindow):
         self.setCentralWidget(central_widget)
 
         self.label = QLabel()
-        self.label.setAlignment(0x0084)
+        self.label.setAlignment(Qt.AlignCenter)
         self.label.setFont(QFont("Arial", 60))
         self.label.setStyleSheet("""
             QLabel {

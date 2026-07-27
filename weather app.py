@@ -3,6 +3,7 @@ import requests
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QLabel, QPushButton,
                              QLineEdit, QVBoxLayout, QHBoxLayout, QWidget, QMessageBox)
 from PyQt5.QtGui import QFont
+from PyQt5.QtCore import Qt
 
 
 class WeatherApp(QMainWindow):
@@ -18,7 +19,7 @@ class WeatherApp(QMainWindow):
         self.title_label = QLabel("Weather App")
         self.title_label.setFont(QFont("Arial", 24, QFont.Bold))
         self.title_label.setStyleSheet("color: #cba6f7;")
-        self.title_label.setAlignment(0x0084)
+        self.title_label.setAlignment(Qt.AlignCenter)
 
         self.city_input = QLineEdit()
         self.city_input.setPlaceholderText("Enter city name...")
@@ -56,7 +57,7 @@ class WeatherApp(QMainWindow):
         self.result_label = QLabel()
         self.result_label.setFont(QFont("Arial", 12))
         self.result_label.setStyleSheet("color: #cdd6f4; padding: 10px;")
-        self.result_label.setAlignment(0x0084)
+        self.result_label.setAlignment(Qt.AlignCenter)
         self.result_label.setWordWrap(True)
 
         input_layout = QHBoxLayout()

@@ -4,7 +4,7 @@ import pygame
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QLabel, QPushButton,
                              QListWidget, QVBoxLayout, QHBoxLayout, QWidget,
                              QFileDialog)
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtGui import QFont
 
 
@@ -26,11 +26,11 @@ class MusicPlayer(QMainWindow):
 
         self.title_label = QLabel("No track loaded")
         self.title_label.setFont(QFont("Arial", 16, QFont.Bold))
-        self.title_label.setAlignment(0x0084)
+        self.title_label.setAlignment(Qt.AlignCenter)
         self.title_label.setStyleSheet("color: #333; padding: 10px;")
 
         self.status_label = QLabel("")
-        self.status_label.setAlignment(0x0084)
+        self.status_label.setAlignment(Qt.AlignCenter)
         self.status_label.setStyleSheet("color: #777;")
 
         self.playlist_widget = QListWidget()

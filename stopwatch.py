@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QWidget
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtGui import QFont
 
 
@@ -17,7 +17,7 @@ class Stopwatch(QMainWindow):
         self.setCentralWidget(central_widget)
 
         self.time_label = QLabel("00:00.00")
-        self.time_label.setAlignment(0x0084)
+        self.time_label.setAlignment(Qt.AlignCenter)
         self.time_label.setFont(QFont("Arial", 50))
         self.time_label.setStyleSheet("""
             QLabel {
