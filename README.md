@@ -95,6 +95,11 @@ This repository documents the basic Python tasks assigned during my internship p
 |---|---|
 | `gui.py` | PyQt5 GUI demo with QVBoxLayout, colored labels, and widget management. |
 | `push button.py` | PyQt5 button demo with click events, dynamic text changes, and button disabling. |
+| `digital clock.py` | Live digital clock with `QTimer`, real-time `QLabel` updates, and styled display. |
+| `stopwatch.py` | Full-featured stopwatch with start/stop/reset and 10ms precision timing. |
+| `weather app.py` | Weather dashboard fetching live data from OpenWeatherMap API with styled UI. |
+| `qr code.py` | QR code generator with text/URL input, live preview, and PNG export. |
+| `music player.py` | Audio player with playlist, playback controls, and progress tracking via pygame mixer. |
 
 ---
 
@@ -116,9 +121,10 @@ This repository documents the basic Python tasks assigned during my internship p
 ## Requirements
 
 - Python 3.x
-- `requests` — for API calls (`how to connect to api.py`)
-- `PyQt5` — for GUI applications (`gui.py`, `push button.py`)
-- `pygame-ce` — for game development
+- `requests` — for API calls (`how to connect to api.py`, `weather app.py`)
+- `PyQt5` — for GUI applications
+- `pygame-ce` — for audio playback (`music player.py`)
+- `qrcode` + `Pillow` — for QR code generation (`qr code.py`)
 
 ---
 

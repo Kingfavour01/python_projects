@@ -295,3 +295,69 @@ Today's session extended PyQt5 GUI development by introducing three critical com
 - **Consistent Theming:** Applied global stylesheets at the `QApplication` level to enforce a consistent theme across all widgets in the application, mimicking the separation of structure (Python) and presentation (CSS) found in web development.
 
 **Relevant Files:** *(pending — new PyQt5 widget demos)*
+
+---
+
+### Day 11 (Week 3, Day 4 — Thursday) — Real-Time GUI Applications: Digital Clock & Stopwatch
+
+**Focus:** PyQt5 QTimer, Real-Time Updates, and Time-Based GUI Applications
+
+**Activity Description:**
+Focused on building real-time, dynamically updating PyQt5 applications driven by the `QTimer` class. Engineered a live digital clock that continuously refreshes every second by polling the system time and updating a `QLabel` widget. Extended the timer concept to build a full-featured stopwatch with start, stop, and reset functionality, requiring precise state management and millisecond-level accuracy.
+
+**Key Concepts Learned & Applied:**
+
+**1. QTimer & Real-Time Updates:**
+
+- **`QTimer` Initialization:** Created `QTimer` objects and configured them to emit `timeout` signals at fixed intervals (e.g., every 1000ms for a clock, every 10ms for a stopwatch).
+- **Signal-Slot Connection:** Connected the `QTimer.timeout` signal to custom update methods that refresh GUI elements with current time values.
+- **Polling vs. Blocking:** Understood that `QTimer` integrates with PyQt5's event loop, allowing continuous time updates without blocking the main application thread.
+
+**2. Digital Clock Application:**
+
+- **System Time Retrieval:** Used `datetime.now()` to fetch the current system hour, minute, and second, then formatted into a human-readable `HH:MM:SS` string.
+- **Dynamic Label Updates:** Continuously updated a `QLabel` display using `setText()` every second via `QTimer`, creating a live clock feel.
+- **Visual Styling:** Applied custom fonts and stylesheets to render the clock with a digital display aesthetic, including colored text, background gradients, and font sizing.
+
+**3. Stopwatch Application:**
+
+- **Elapsed Time Tracking:** Used `QTimer` at 10ms intervals to increment a running elapsed time counter. Stored elapsed milliseconds and converted to `minutes:seconds.milliseconds` display format.
+- **State Machine Logic:** Implemented three distinct states — Stopped, Running, and Paused — managed through boolean flags and button enable/disable logic to prevent invalid operations (e.g., starting an already-running timer).
+- **Start/Stop/Reset Buttons:** Created `QPushButton` widgets for Start, Stop, and Reset with conditional logic. Start began the timer, Stop paused it while preserving elapsed time, and Reset cleared all counters back to zero.
+- **Elapsed Time Formatting:** Calculated elapsed time using modular arithmetic — hours = elapsed // 3600, minutes = (elapsed % 3600) // 60, seconds = elapsed % 60 — then formatted with zero-padding for consistent digit width.
+
+**Relevant Files:** `digital clock.py`, `stopwatch.py`
+
+---
+
+### Day 12 (Week 3, Day 5 — Friday) — API-Powered Apps, QR Code Generation & Audio Playback
+
+**Focus:** REST API Integration, QR Code Encoding, and Multimedia with Pygame
+
+**Activity Description:**
+Concluded Week 3 with three diverse, practical projects that integrated external services and multimedia capabilities. Built a weather application that fetches live meteorological data from a public API and renders it in a styled PyQt5 interface. Created a QR code generator that encodes arbitrary text or URLs into scannable 2D barcode images using the `qrcode` library. Finally, developed a music player application using `pygame-ce` mixer to load, play, pause, and navigate through audio files from the filesystem.
+
+**Key Concepts Learned & Applied:**
+
+**1. Weather App (API Integration):**
+
+- **REST API Consumption:** Sent HTTP GET requests to the OpenWeatherMap API endpoint, passing location-based query parameters (`q=city&appid=api_key`). Parsed the JSON response into a Python dictionary to extract key fields: temperature, humidity, weather description, and wind speed.
+- **Temperature Conversion:** Applied the formula `(temp - 273.15) * 9/5 + 32` to convert Kelvin (default API unit) to Fahrenheit for user-friendly display.
+- **Error Handling for APIs:** Implemented `try/except` blocks and HTTP status code checks. Handled `KeyError` for invalid city names, `requests.ConnectionError` for network failures, and displayed user-friendly error messages in the GUI rather than crashing.
+- **PyQt5 UI Integration:** Built a weather dashboard using `QLineEdit` for city input, `QPushButton` for triggering the API call, and multiple `QLabel` widgets styled with weather-appropriate icons and colors to display results.
+
+**2. QR Code Generator:**
+
+- **`qrcode` Library:** Used the `qrcode.make()` function to encode any string or URL into a QR code matrix. Saved the resulting image using the Pillow (`PIL`) backend with `.save()`.
+- **QR Code Configuration:** Customized QR code parameters including `box_size` (pixel size per module), `border` (white space margin), and `error_correction` level to balance scannability with image dimensions.
+- **File Output:** Generated QR code images as PNG files, displaying them in a `QLabel` with `QPixmap` after generation for immediate visual feedback.
+
+**3. Music Player (Pygame Mixer):**
+
+- **Pygame Mixer Initialization:** Called `pygame.mixer.init()` to set up the audio subsystem with appropriate sample rate and buffer size for MP3/WAV playback.
+- **File Loading & Playback:** Used `pygame.mixer.music.load(filepath)` to load an audio file and `pygame.mixer.music.play()` to begin playback. Implemented `pause()`, `unpause()`, and `stop()` for full playback control.
+- **Volume & Progress:** Adjusted playback volume using `set_volume()` (0.0 to 1.0). Queried playback position with `get_pos()` for progress tracking.
+- **Playlist Management:** Dynamically listed `.mp3` files from a local directory using `os.listdir()`, allowing the user to select and switch between tracks during a session.
+- **Button-Driven Interface:** Built a simple playback control panel with Play, Pause, Stop, Next, and Previous buttons connected to mixer functions via `QPushButton` clicked signals.
+
+**Relevant Files:** `weather app.py`, `qr code.py`, `music player.py`
