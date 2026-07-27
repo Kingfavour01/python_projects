@@ -1,0 +1,9 @@
+.env
+__pycache__/
+.venv/
+*.pyc
+.idea/
+output.txt
+text.txt
+journal.json
+image.jpg

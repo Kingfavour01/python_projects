@@ -1,4 +1,5 @@
 import sys
+import os
 import requests
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QLabel, QPushButton,
                              QLineEdit, QVBoxLayout, QHBoxLayout, QWidget, QMessageBox)
@@ -6,9 +7,24 @@ from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt
 
 
+def load_api_key():
+    env_path = os.path.join(os.path.dirname(__file__), ".env")
+    if not os.path.exists(env_path):
+        return None
+    with open(env_path, "r") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                key, value = line.split("=", 1)
+                if key.strip() == "OPENWEATHER_API_KEY":
+                    return value.strip()
+    return None
+
+
 class WeatherApp(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.api_key = load_api_key()
         self.setWindowTitle("Weather App")
         self.setGeometry(700, 300, 400, 450)
         self.setStyleSheet("background-color: #1e1e2e;")
@@ -80,8 +96,10 @@ class WeatherApp(QMainWindow):
             return
 
         try:
-            api_key = "YOUR_API_KEY"
-            url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
+            if not self.api_key:
+                self.result_label.setText("API key not found. Create a .env file with OPENWEATHER_API_KEY.")
+                return
+            url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={self.api_key}"
             response = requests.get(url, timeout=10)
 
             if response.status_code == 404:
