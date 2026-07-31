@@ -11,7 +11,7 @@
 
 ---
 
-### Day 1 (Week 1, Day 1) — Foundations of Python Programming and Control Flow
+### Day 1 (Week 1, Day 1 — Wednesday, July 8) — Foundations of Python Programming and Control Flow
 
 **Focus:** Python Programming Fundamentals, Algorithmic Logic, and Modular Design
 
@@ -29,7 +29,7 @@ Engaged in a comprehensive practical training module focused on Python fundament
 
 ---
 
-### Day 2 (Week 1, Day 2) — Iteration, Data Structures, and Algorithmic Logic
+### Day 2 (Week 1, Day 2 — Thursday, July 9) — Iteration, Data Structures, and Algorithmic Logic
 
 **Focus:** Iteration, Data Structures, and Algorithmic Logic
 
@@ -47,7 +47,7 @@ Advanced to handling complex data states, repetitive tasks, and non-deterministi
 
 ---
 
-### Day 3 (Week 1, Day 3) — Modular Programming & Functions
+### Day 3 (Week 1, Day 3 — Friday, July 10) — Modular Programming & Functions
 
 **Focus:** Modular Programming and Function Design
 
@@ -69,7 +69,7 @@ Focused on modular software design by creating reusable Python functions. Practi
 
 ---
 
-### Day 4 (Week 2, Day 1) — Advanced Iteration and Code Organization
+### Day 4 (Week 2, Day 1 — Tuesday, July 14) — Advanced Iteration and Code Organization
 
 **Focus:** Advanced Data Filtering, Structural Pattern Matching, and Program Architecture
 
@@ -90,7 +90,7 @@ Transitioned into writing more efficient, "Pythonic" code. The focus of today's 
 
 ---
 
-### Day 5 (Week 2, Day 2) — Real-World Algorithms and State Management
+### Day 5 (Week 2, Day 2 — Wednesday, July 15) — Real-World Algorithms and State Management
 
 **Focus:** Applied Algorithmic Logic and Stateful Application Development
 
@@ -108,7 +108,7 @@ Focused on synthesizing previous knowledge of loops, collections, and functions 
 
 ---
 
-### Day 6 (Week 2, Day 3) — Comprehensive Software Architecture and Algorithmic Logic
+### Day 6 (Week 2, Day 3 — Thursday, July 16) — Comprehensive Software Architecture and Algorithmic Logic
 
 **Focus:** Object-Oriented Architecture, Algorithmic Thinking, and Memory Management
 
@@ -145,7 +145,7 @@ Today's session was highly intensive, merging architectural software design (Obj
 
 ---
 
-### Day 7 (Week 2, Day 4) — Advanced System Operations, Metaprogramming, and Performance Profiling
+### Day 7 (Week 2, Day 4 — Friday, July 17) — Advanced System Operations, Metaprogramming, and Performance Profiling
 
 **Focus:** Advanced Object-Oriented Mechanics, System I/O Operations, and Temporal Software Utilities
 
@@ -187,7 +187,7 @@ Today's training module marked a significant transition from writing isolated lo
 
 ---
 
-### Day 8 (Week 3, Day 1 — Monday) — WordPress CMS & LearnPress AI Integration
+### Day 8 (Week 3, Day 1 — Monday, July 20) — WordPress CMS & LearnPress AI Integration
 
 **Focus:** Content Management Systems and E-Learning Platform Configuration
 
@@ -224,7 +224,7 @@ Transitioned from Python programming into full-fledged web content management by
 
 ---
 
-### Day 9 (Week 3, Day 2 — Tuesday) — Advanced Python Iteration, Concurrency, API Integration & GUI Development
+### Day 9 (Week 3, Day 2 — Tuesday, July 21) — Advanced Python Iteration, Concurrency, API Integration & GUI Development
 
 **Focus:** Iterators, Generators, Dataclasses, Multithreading, API Requests, and PyQt5 GUI
 
@@ -265,7 +265,7 @@ Covered a broad range of advanced Python topics in a single intensive session, s
 
 ---
 
-### Day 10 (Week 3, Day 3 — Wednesday) — Advanced PyQt5 Widgets & Qt Style Sheets
+### Day 10 (Week 3, Day 3 — Wednesday, July 22) — Advanced PyQt5 Widgets & Qt Style Sheets
 
 **Focus:** Radio Buttons, Line Edits, and Qt Style Sheet (CSS) Styling
 
@@ -298,7 +298,7 @@ Today's session extended PyQt5 GUI development by introducing three critical com
 
 ---
 
-### Day 11 (Week 3, Day 4 — Thursday) — Real-Time GUI Applications: Digital Clock & Stopwatch
+### Day 11 (Week 3, Day 4 — Thursday, July 23) — Real-Time GUI Applications: Digital Clock & Stopwatch
 
 **Focus:** PyQt5 QTimer, Real-Time Updates, and Time-Based GUI Applications
 
@@ -330,7 +330,7 @@ Focused on building real-time, dynamically updating PyQt5 applications driven by
 
 ---
 
-### Day 12 (Week 3, Day 5 — Friday) — API-Powered Apps, QR Code Generation & Audio Playback
+### Day 12 (Week 3, Day 5 — Friday, July 24) — API-Powered Apps, QR Code Generation & Audio Playback
 
 **Focus:** REST API Integration, QR Code Encoding, and Multimedia with Pygame
 
@@ -361,3 +361,97 @@ Concluded Week 3 with three diverse, practical projects that integrated external
 - **Button-Driven Interface:** Built a simple playback control panel with Play, Pause, Stop, Next, and Previous buttons connected to mixer functions via `QPushButton` clicked signals.
 
 **Relevant Files:** `weather app.py`, `qr code.py`, `music player.py`
+
+---
+
+## Week 4
+
+---
+
+### Day 13 (Week 4, Day 1 — Monday, July 27) — Off Day
+
+No activity scheduled.
+
+---
+
+### Day 14 (Week 4, Day 2 — Tuesday, July 28) — Linux Fundamentals & Fedora 44 Upgrade
+
+**Focus:** Operating Systems, Command-Line Proficiency, and System Administration
+
+**Activity Description:**
+Transitioned into systems-level computing by exploring the Linux operating system environment. The session covered fundamental command-line operations, the Linux file system hierarchy, user and permission management, and package handling. Culminated in performing a full system upgrade from an earlier Fedora release to Fedora 44, understanding the update lifecycle and post-upgrade system verification.
+
+**Key Concepts Learned & Applied:**
+
+**1. Linux Terminal & Command-Line Fundamentals:**
+
+- **Shell Navigation:** Used essential terminal commands to traverse the file system — `pwd` (print working directory), `ls` (list directory contents with flags like `-la` for detailed views), `cd` (change directory), and `mkdir`/`rmdir` for directory creation and removal.
+- **File Operations:** Performed file creation (`touch`), copying (`cp`), moving/renaming (`mv`), and deletion (`rm`). Understood the difference between relative and absolute paths when referencing files.
+- **File Viewing & Editing:** Used `cat`, `less`, and `head`/`tail` to view file contents. Became familiar with `nano` as a simple terminal-based text editor for configuration files.
+
+**2. File System Structure & Permissions:**
+
+- **Linux Directory Hierarchy:** Explored the standard Linux file system layout including `/home` (user data), `/etc` (configuration files), `/var` (logs and variable data), `/usr` (user binaries), and `/tmp` (temporary files).
+- **Permission Model:** Understood the `rwx` (read, write, execute) permission structure for Owner, Group, and Others. Used `chmod` with symbolic notation (`u+x`, `g-w`) and octal values to modify access rights.
+- **User Management:** Differentiated between the root superuser and standard user accounts. Used `sudo` to execute privileged commands securely.
+
+**3. Package Management & System Updates:**
+
+- **DNF Package Manager:** Used Fedora's native `dnf` package manager to search for packages (`dnf search`), install software (`dnf install`), remove packages (`dnf remove`), and check for available updates (`dnf check-update`).
+- **Repository Configuration:** Understood how software repositories work as centralized sources for trusted, pre-compiled packages and how they are configured under `/etc/yum.repos.d/`.
+- **Full System Upgrade:** Performed a `dnf system-upgrade` to migrate from an older Fedora version to Fedora 44. Followed the multi-step process: download upgrade packages, reboot into upgrade mode, and verify the new release with `cat /etc/fedora-release` and `uname -r`.
+
+**4. Post-Upgrade Verification:**
+
+- **System Health Check:** Verified successful upgrade by confirming the kernel version, checking that all services were running, and ensuring previously installed applications and configurations were preserved.
+- **Rollback Awareness:** Learned the importance of backups and understood that `dnf history undo` can revert transactions if an upgrade introduces instability.
+
+---
+
+### Day 15 (Week 4, Day 3 — Wednesday, July 29) — Sick Day
+
+Absent due to illness. No activity recorded.
+
+---
+
+### Day 16 (Week 4, Day 4 — Thursday, July 30) — Sick Day
+
+Absent due to illness. No activity recorded.
+
+---
+
+### Day 17 (Week 4, Day 5 — Friday, July 31) — WordPress E-Commerce Store with WooCommerce & WhatsApp Integration
+
+**Focus:** E-Commerce Platform Configuration, Product Management, and Client Communication
+
+**Activity Description:**
+Built a fully functional demo e-commerce store on WordPress using the WooCommerce plugin. Configured the core store settings including currency, tax rules, and shipping zones. Created product listings with images, pricing tiers, inventory tracking, and category organization. Set up the shopping cart and checkout flow, and integrated WhatsApp as a direct client communication channel so customers can instantly message the store owner with order inquiries.
+
+**Key Concepts Learned & Applied:**
+
+**1. WooCommerce Setup & Configuration:**
+
+- **Plugin Installation:** Installed and activated WooCommerce from the WordPress plugin directory. Completed the setup wizard including store location, currency selection (NGN or USD), and industry classification.
+- **Store Settings:** Configured payment gateways (Cash on Delivery, Direct Bank Transfer), shipping zones with flat rate pricing, tax rules, and email notification templates for order confirmations.
+- **Pages Auto-Generation:** Allowed WooCommerce to automatically create essential store pages — Shop (product listing), Cart (review before checkout), Checkout (billing and order summary), and My Account (customer login and order history).
+
+**2. Product Management & Inventory:**
+
+- **Product Creation:** Created both simple and variable products with SKU numbers, regular and sale prices, product descriptions, short descriptions for listing pages, and featured images.
+- **Categories & Tags:** Organized products into hierarchical categories (e.g., Electronics, Clothing, Accessories) and applied descriptive tags for improved store navigation and searchability.
+- **Inventory Tracking:** Enabled stock management at the product level. Set stock quantities and configured backorder settings to prevent overselling on out-of-stock items.
+
+**3. Shopping Cart & Checkout Flow:**
+
+- **Cart Functionality:** Tested the end-to-end user journey — browsing the shop, adding items to cart, updating quantities, applying coupon codes, and proceeding to checkout.
+- **Checkout Configuration:** Customized the checkout form fields, enabled guest checkout for faster conversions, and configured order success/error messaging.
+
+**4. WhatsApp Integration for Client Communication:**
+
+- **WhatsApp Click-to-Chat Plugin:** Installed a WhatsApp chat plugin that adds a floating WhatsApp button to the storefront. Configured the plugin with the client's phone number and customized the default greeting message.
+- **Order Notification Workflow:** Set up the chat button on product pages so customers can inquire about specific items directly. Configured the checkout confirmation page with a WhatsApp link for customers to confirm orders or request delivery updates.
+- **Direct Link Generation:** Understood the WhatsApp Click-to-Chat API URL structure (`https://wa.me/234XXXXXXXXXX?text=Message`) to manually embed WhatsApp links in product descriptions, order confirmation emails, and the contact page.
+
+---
+
+*End of Week 4 records.*
