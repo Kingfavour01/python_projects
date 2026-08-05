@@ -139,6 +139,18 @@ This repository documents the basic Python tasks assigned during my internship p
 
 Detailed daily activity and progress reports for the internship programme are documented in [SIWES_LOG.md](SIWES_LOG.md).
 
+**Progress:** Weeks 1–5 recorded (through **Day 20 — Wednesday, August 5**).
+
+| Week | Focus |
+|---|---|
+| Week 1 | Python fundamentals, control flow, iteration, and functions |
+| Week 2 | Advanced iteration, algorithms, object-oriented programming, metaprogramming, and file I/O |
+| Week 3 | WordPress CMS + LearnPress AI, iterators/generators, concurrency, REST APIs, and PyQt5 GUI applications |
+| Week 4 | Linux fundamentals and Fedora 44 upgrade, WooCommerce e-commerce store with WhatsApp integration |
+| Week 5 | Remote-access infrastructure — Tailscale VPN, opencode web deployment, secure mobile access |
+
+The Week 5 remote-access setup (Tailscale + opencode web) is also documented as a reusable, step-by-step runbook in [REMOTE-PHONE-ACCESS-WINDOWS.md](REMOTE-PHONE-ACCESS-WINDOWS.md) so the same configuration can be reproduced on another machine.
+
 ---
 
 *Built during internship programme at Afe Babalola University (ABUAD).*
