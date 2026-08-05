@@ -9,11 +9,11 @@ top-to-bottom.
 
 - **Target:** Windows 10 or 11 (x64)
 - **Credentials (reuse the SAME ones as Linux):**
-  - Username: `opencode`
-  - Password: `kingfresh2026`
+  - Username: `<YOUR-USERNAME>`
+  - Password: `<YOUR-PASSWORD>`
 - **Port:** `4096` (bound to `127.0.0.1` only — never `0.0.0.0`, never `--mdns`)
-- **Tailnet:** `tail6a788d.ts.net` (owner: `kingfresh1000upgrades@gmail.com`)
-- **Serve URL on Windows:** `https://<WINDOWS-HOSTNAME>.tail6a788d.ts.net`
+- **Tailnet:** `<YOUR-TAILNET>.ts.net` (owner: `<YOUR-TAILSCALE-EMAIL>`)
+- **Serve URL on Windows:** `https://<WINDOWS-HOSTNAME>.<YOUR-TAILNET>.ts.net`
   (`<WINDOWS-HOSTNAME>` is the Windows machine's MagicDNS name — see Step 0)
 
 ---
@@ -23,7 +23,7 @@ top-to-bottom.
 ```
 ┌────────────┐   WireGuard (Tailscale VPN)   ┌───────────────────────────────┐
 │  Phone     │ ─────────────────────────────▶│  Windows PC                    │
-│ (Android)  │   https://<pc>.tail6a788d.ts.net                            │
+│ (Android)  │   https://<pc>.<YOUR-TAILNET>.ts.net                            │
 │ OpenRemote │                               │  tailscaled ── serve ── HTTPS │
 │ MobileCode │                               │     │                        │
 └────────────┘                               │     ▼                        │
@@ -83,7 +83,7 @@ Note your machine's MagicDNS name for Step 5/6:
 tailscale status | Select-String "<"
 ```
 
-It will look like `<WINDOWS-HOSTNAME>.tail6a788d.ts.net`.
+It will look like `<WINDOWS-HOSTNAME>.<YOUR-TAILNET>.ts.net`.
 
 ---
 
@@ -126,8 +126,8 @@ Create the file `C:\Users\<YOU>\.opencode\opencode-web.cmd` with this exact cont
 
 ```bat
 @echo off
-set OPENCODE_SERVER_USERNAME=opencode
-set OPENCODE_SERVER_PASSWORD=kingfresh2026
+set OPENCODE_SERVER_USERNAME=<YOUR-USERNAME>
+set OPENCODE_SERVER_PASSWORD=<YOUR-PASSWORD>
 opencode web --hostname 127.0.0.1 --port 4096
 ```
 
@@ -174,8 +174,8 @@ Expected: `401` (authentication required) — this is correct, the server is up 
 Then with credentials:
 
 ```powershell
-$sec = ConvertTo-SecureString "kingfresh2026" -AsPlainText -Force
-$cred = New-Object System.Management.Automation.PSCredential("opencode", $sec)
+$sec = ConvertTo-SecureString "<YOUR-PASSWORD>" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential("<YOUR-USERNAME>", $sec)
 Invoke-WebRequest -Uri http://127.0.0.1:4096 -UseBasicParsing -Credential $cred | Select-Object StatusCode
 ```
 
@@ -204,7 +204,7 @@ Expected output:
 
 ```
 Available within your tailnet:
-https://<WINDOWS-HOSTNAME>.tail6a788d.ts.net
+https://<WINDOWS-HOSTNAME>.<YOUR-TAILNET>.ts.net
 
 |-- / proxy http://127.0.0.1:4096
 ```
@@ -217,16 +217,16 @@ The `--bg` flag persists across reboots (same as the Linux setup).
 
 1. Make sure the phone's Tailscale is up (the `redmi-13` device).
 2. Open **OpenRemote** (or MobileCode) and add a server:
-   - **URL:** `https://<WINDOWS-HOSTNAME>.tail6a788d.ts.net`
-   - **Username:** `opencode`
-   - **Password:** `kingfresh2026`
+   - **URL:** `https://<WINDOWS-HOSTNAME>.<YOUR-TAILNET>.ts.net`
+   - **Username:** `<YOUR-USERNAME>`
+   - **Password:** `<YOUR-PASSWORD>`
 3. Confirm you see the session list / can open a session.
 
 Test the raw endpoint from any tailnet device as a sanity check:
 
 ```powershell
 # on another device, or from PowerShell with creds
-Invoke-WebRequest -Uri "https://<WINDOWS-HOSTNAME>.tail6a788d.ts.net/session/status" -Credential $cred -UseBasicParsing
+Invoke-WebRequest -Uri "https://<WINDOWS-HOSTNAME>.<YOUR-TAILNET>.ts.net/session/status" -Credential $cred -UseBasicParsing
 ```
 
 Expected: `200` with JSON (`{"healthy":true,...}`).
@@ -251,8 +251,8 @@ Everything should come up on its own after a reboot:
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | `tailscale serve` asks to enable HTTPS / prints admin URL | HTTPS not enabled in tailnet | Open the printed URL, approve HTTPS, re-run the serve command |
-| Phone gets connection refused / timeout | Phone Tailscale off, or wrong hostname | `tailscale status` on phone; confirm `redmi-13` is up; use the exact `...tail6a788d.ts.net` name |
-| Phone gets 401/403 | Wrong creds | Use `opencode` / `kingfresh2026` |
+| Phone gets connection refused / timeout | Phone Tailscale off, or wrong hostname | `tailscale status` on phone; confirm `redmi-13` is up; use the exact `...<YOUR-TAILNET>.ts.net` name |
+| Phone gets 401/403 | Wrong creds | Use `<YOUR-USERNAME>` / `<YOUR-PASSWORD>` |
 | `http://127.0.0.1:4096` connection refused | `opencode-web` task not running | `schtasks /Query /TN "opencode-web"`, then `/Run`; check the `.cmd` path is correct |
 | 502 from serve URL | backend down or loopback mismatch | Confirm Step 4 works; re-run `tailscale serve --bg --https=443 http://127.0.0.1:4096` |
 | `opencode` command not found after install | PATH not refreshed | Reopen the terminal |
@@ -265,7 +265,7 @@ Everything should come up on its own after a reboot:
 
 - **Loopback only:** `opencode web` binds `127.0.0.1:4096`. Never use `0.0.0.0` or `--mdns`.
 - **Tailnet-only:** `tailscale serve` (not `tailscale funnel`) — the URL is private to your tailnet.
-- **Shared password:** both Linux and Windows use the same `opencode`/`kingfresh2026`.
+- **Shared password:** both Linux and Windows use the same `opencode`/`<YOUR-PASSWORD>`.
   Anyone in your tailnet with these creds can drive your opencode. Rotate the password in the
   wrapper script (and the Linux `.env`) if ever leaked.
 - **Same port both machines:** the Linux box and Windows box both use `4096` — they are separate
