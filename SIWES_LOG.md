@@ -454,4 +454,35 @@ Built a fully functional demo e-commerce store on WordPress using the WooCommerc
 
 ---
 
-*End of Week 4 records.*
+## Week 5
+
+---
+
+### Day 20 (Week 5, Day 3 — Wednesday, August 5) — Remote Access Infrastructure: Tailscale VPN, opencode Web Deployment, and Secure Mobile Connectivity
+
+**Focus:** Virtual Private Networking, Secure Service Deployment, Reverse Proxying, and Cross-Platform Documentation
+
+**Activity Description:**
+Deployed a fully secured remote-access stack so the opencode AI coding environment can be operated from a phone anywhere, restricted to a private virtual network. Installed the Tailscale mesh VPN on Fedora 44, joined it to an existing tailnet, and enabled MagicDNS with HTTPS certificate provisioning. Ran the opencode web interface as a user-level systemd service bound strictly to `127.0.0.1:4096` with password authentication via environment variables. Exposed that service across the tailnet using Tailscale's HTTPS reverse proxy (`tailscale serve`) so the phone reaches it through the encrypted VPN rather than exposing a public port. Configured boot persistence with linger so the stack survives reboots. Verified end-to-end connectivity from Android clients (OpenRemote and MobileCode) over the tailnet. Concluded by authoring a step-by-step Windows setup runbook so the same configuration can be reproduced on another machine.
+
+**Key Concepts Learned:**
+
+- **Mesh VPN (Tailscale/WireGuard):** Understood how an overlay network creates encrypted point-to-point tunnels between devices without port forwarding, and how devices are addressed by stable tailnet IPs and MagicDNS hostnames (e.g., `fedora.tail6a788d.ts.net`).
+- **MagicDNS & HTTPS Certificates:** Learned that enabling HTTPS in the tailnet lets Tailscale auto-provision TLS certificates for the serve URL, giving browser/phone clients a valid cert with zero manual setup.
+- **Secure Service Deployment (systemd user unit):** Created and enabled a user-level systemd service (`opencode-web.service`) for the web server, managed via `systemctl --user`, with credentials supplied through an environment file rather than command-line flags.
+- **Loopback Binding:** Bound the server to `127.0.0.1` so it is unreachable from the LAN directly — only reachable through the authorized reverse proxy. Direct LAN access returns connection refused by design.
+- **Reverse Proxying over the VPN:** Used `tailscale serve --bg --https=443 http://127.0.0.1:4096` to terminate HTTPS at the tailnet edge and forward to the loopback service, restricting access to devices already in the tailnet.
+- **Boot Persistence (`loginctl enable-linger`):** Learned how user services start automatically after reboot without a login session.
+- **Mobile Client Integration:** Configured and verified third-party Android clients (OpenRemote, MobileCode) against the same authenticated endpoint, confirming the URL, username, and password flow.
+
+**Relevant Files:** `REMOTE-PHONE-ACCESS-WINDOWS.md`, `~/.config/systemd/user/opencode-web.service`, `~/.config/systemd/user/opencode-web.env`
+
+---
+
+### Learning Experience — WhatsApp-to-opencode Integration (Documented, Not Re-solved)
+
+An earlier attempt to bridge WhatsApp messaging into the opencode environment was explored and ultimately discontinued. The approach required a WhatsApp Business/Cloud API, a public tunnel (ngrok) to receive webhook callbacks, and browser automation (Chrome DevTools Protocol) to drive the agent's interface — a fragile chain of external services that did not prove practical for this use case. This is recorded here as a learning experience in API integration, webhook handling, and tunnel-based connectivity rather than a resolved feature. The experience informed the decision to favour a private, first-party remote-access path (this session's Tailscale-based setup) over a third-party messaging bridge.
+
+---
+
+*End of Week 5 (Days 18–19 pending) records.*
